@@ -60,7 +60,7 @@ export default function UploadResume() {
     formData.append('role', role)
 
     try {
-      const res = await fetch('http://localhost:5000/api/analyze', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/analyze`, {
         method: 'POST',
         body: formData,
       })
