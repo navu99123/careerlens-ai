@@ -28,7 +28,10 @@ logger = logging.getLogger(__name__)
  
 # ─── Flask app setup ──────────────────────────────────────────────────────────
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])
+CORS(app, origins=[
+    "http://localhost:5173",
+    "https://careerlens-ai-pearl.vercel.app"
+])
  
 # ─── Initialize ResumeAnalyzer (OOP: creating an object) ─────────────────────
 try:
